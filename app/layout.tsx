@@ -23,14 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 dark:bg-gray-900 dark flex flex-col min-h-screen">
-        {/* Header (Fixed Height) */}
-        <header className="py-20 flex items-center justify-between relative">
-
-          <span className="absolute left-1/2 transform -translate-x-1/2 text-3xl font-bold text-green-700 dark:text-blue-400">
-          Giving AI Agent For Nomad
-          </span>
-        </header>
+        <body className="flex flex-col min-h-screen custom-gradient">
+          {/* Header */}
+           <header className="py-10 flex items-center justify-center relative">
+             <div className="text-center">
+               <h1 className="text-5xl font-extrabold text-green-700 dark:text-blue-400 tracking-tight drop-shadow-sm">
+               EcoNomad AI
+               </h1>
+               <p className="mt-2 text-base text-gray-600 dark:text-gray-300 italic font-light">
+               Giving AI Agent For Nomad
+               </p>
+            </div>
+          </header>
 
         {/* Main Content (Dynamic, Grows but Doesn't Force Scroll) */}
         <main className="flex-grow">{children}</main>
