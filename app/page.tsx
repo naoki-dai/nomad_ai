@@ -54,7 +54,7 @@ export default function Home() {
     const isUser = msg.sender === "user";
 
     return (
-      <div key={index} className={`flex items-start space-x-3 ${isUser ? "justify-end" : "justify-start"}`}>
+      <div key={index} className={`flex items-start space-x-3 space-y-2 ${isUser ? "justify-end" : "justify-start"}`}>
         {/* プロフィール画像（受信側のみ） */}
         {!isUser && (
           <div className="flex flex-col items-center justify-start">
