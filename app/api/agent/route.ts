@@ -46,6 +46,6 @@ export async function POST(
     return NextResponse.json({ response: text });
   } catch (error) {
     console.error("Error processing request:", error);
-    return NextResponse.json({ error: "Failed to process message" });
+    return NextResponse.json({ error: "正しく送信できなかったトン...しばらく待ってから送信する" });
   }
 }

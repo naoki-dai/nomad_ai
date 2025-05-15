@@ -39,14 +39,14 @@ export default function Home() {
         {/* Chat Messages */}
         <div className="flex-grow overflow-y-auto space-y-3 p-2">
           {messages.length === 0 ? (
-            <p className="text-center text-gray-500">Start chatting with AgentKit...</p>
+            <p className="text-center text-gray-500">エコトンとの会話がここに表示されるよ！</p>
           ) : (
             messages.map((msg, index) => (
               <div
                 key={index}
                 className={`p-3 rounded-2xl shadow ${
                   msg.sender === "user"
-                    ? "bg-[#0052FF] text-white self-end"
+                    ? "bg-[#00a63f] text-white self-end img"
                     : "bg-gray-100 dark:bg-gray-700 self-start"
                 }`}
               >
@@ -64,12 +64,13 @@ export default function Home() {
                 >
                   {msg.text}
                 </ReactMarkdown>
+                
               </div>
             ))
           )}
 
           {/* Thinking Indicator */}
-          {isThinking && <div className="text-right mr-2 text-gray-500 italic">🤖 Thinking...</div>}
+          {isThinking && <div className="text-right mr-2 text-gray-500">考え中だトン 💬</div>}
 
           {/* Invisible div to track the bottom */}
           <div ref={messagesEndRef} />
@@ -80,7 +81,7 @@ export default function Home() {
           <input
             type="text"
             className="flex-grow p-2 rounded border dark:bg-gray-700 dark:border-gray-600"
-            placeholder={"Type a message..."}
+            placeholder={"ここに文字を入力するトン！"}
             value={input}
             onChange={e => setInput(e.target.value)}
             onKeyDown={e => e.key === "Enter" && onSendMessage()}
@@ -91,11 +92,11 @@ export default function Home() {
             className={`px-6 py-2 rounded-full font-semibold transition-all ${
               isThinking
                 ? "bg-gray-300 cursor-not-allowed text-gray-500"
-                : "bg-[#0052FF] hover:bg-[#003ECF] text-white shadow-md"
+                : "bg-[#00a63f] hover:bg-[#003ECF] text-white shadow-md"
             }`}
             disabled={isThinking}
           >
-            Send
+            送る
           </button>
         </div>
       </div>
