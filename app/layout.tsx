@@ -28,10 +28,10 @@ export default function RootLayout({
            <header className="py-10 flex items-center justify-center relative">
              <div className="text-center">
                <h1 className="text-5xl font-extrabold text-green-700 dark:text-blue-400 tracking-tight drop-shadow-sm">
-               EcoNomad AI
+               Giving AI Agent For Nomad
                </h1>
                <p className="mt-2 text-base text-gray-600 dark:text-gray-300 italic font-light">
-               Giving AI Agent For Nomad
+               福岡の非営利団体に寄付できるノマド向けAIエージェントです(any language available)
                </p>
             </div>
           </header>

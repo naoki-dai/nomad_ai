@@ -42,7 +42,7 @@ export default function Home() {
   <div className="flex flex-col items-center justify-center text-gray-500 mt-10 space-y-4">
     {/* 画像の表示 */}
     <img
-      src="/img/chara.jpeg"
+      src="https://www.smappon.jp/cc101914/file/96740.jpg"
       alt="エコトン"
       className="size-40"
     />
@@ -61,7 +61,7 @@ export default function Home() {
             {/* 丸枠付きアイコン */}
             <div className="w-13 h-13 rounded-full border border-green-500 bg-white flex items-center justify-center mb-1">
               <img
-                src="/img/chara.jpeg"
+                src="https://www.smappon.jp/cc101914/file/96740.jpg"
                 alt="エコトン"
                 className="w-14 h-14 rounded-full"
               />
