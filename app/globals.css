@@ -6,3 +6,28 @@ body {
   @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+.bubble {
+  position: relative;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: 0.5rem;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+}
+
+.bubble-left::after {
+  left: -16px;
+  border-right-color: #90c221; /* 受信メッセージ背景色 */
+}
+
+.bubble-right::after {
+  right: -16px;
+  border-left-color: #00a63f; /* 送信メッセージ背景色 */
+}
+.custom-gradient {
+  background: radial-gradient(ellipse at 30% 40%, #d1fae5 0%, #dbeafe 100%);
+}

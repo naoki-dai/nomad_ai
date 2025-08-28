@@ -64,7 +64,7 @@ export function useAgent() {
     const responseMessage = await messageAgent(input);
 
     if (responseMessage) {
-      setMessages(prev => [...prev, { text: responseMessage, sender: "agent" }]);
+      setMessages(prev => [...prev, { text: responseMessage + "🍃", sender: "agent" }]);
     }
 
     setIsThinking(false);
